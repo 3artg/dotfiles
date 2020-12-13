@@ -72,9 +72,9 @@ nnoremap <C-s>      :update<CR>
 inoremap <C-s> <ESC>:update<CR>
 vnoremap <C-S> <ESC>:update<CR>
 
-nnoremap <F5>      :update<CR>:%y+<CR>:!solve %<CR>
-inoremap <F5> <ESC>:update<CR>:%y+<CR>:!solve %<CR>
-vnoremap <F5> <ESC>:update<CR>:%y+<CR>:!solve %<CR>
+nnoremap <F5>      :update<CR>:!xclip -selection clipboard -rmlastnl %<CR>:!solve %<CR>
+inoremap <F5> <ESC>:update<CR>:!xclip -selection clipboard -rmlastnl %<CR>:!solve %<CR>
+vnoremap <F5> <ESC>:update<CR>:!xclip -selection clipboard -rmlastnl %<CR>:!solve %<CR>
 
 "Credit joshdick
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
