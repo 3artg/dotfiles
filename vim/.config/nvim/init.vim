@@ -17,6 +17,7 @@ set noswapfile
 set incsearch
 set ignorecase
 set smartcase
+set autoread
 
 " Plugin
 if has('nvim')
@@ -59,7 +60,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'lambdalisue/suda.vim'
 let g:suda_smart_edit = 1
-Plug 'djoshea/vim-autoread'
 call plug#end()
 
 cabbrev W write
