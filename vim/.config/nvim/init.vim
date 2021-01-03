@@ -127,5 +127,13 @@ function! EditTCs(...)
     execute "NERDTreeClose"
 endfunction
 
+function! ClearTC()
+    silent execute "!rm *"
+    execute ":only"
+    execute ":e ."
+endfunction
+
 command! -nargs=+ Et call EditTCs(<f-args>)
+command! Ct call ClearTC()
 cnoreabbrev et Et
+cnoreabbrev ct Ct
