@@ -7,6 +7,8 @@
 
 PATH=$PATH:~/bin
 
+export EDITOR=nvim
+export VISUAL=nvim
 export GPG_TTY=$(tty)
 
 alias ls='ls --color=auto'
@@ -17,13 +19,11 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
-alias ls='exa'
-alias l='exa -l'
-alias ll='exa -al'
-alias lll='exa -l | less'
-alias lla='exa -la'
-alias llt='exa -T'
-alias llfu='exa -bghHliS --git'
+alias c='clear'
+alias e="$EDITOR"
+alias ls='lsd'
+alias l='lsd -l'
+alias ll='lsd -Al'
 alias mv='mv -i'
 alias cp='cp -i'
 alias vi='nvim'
