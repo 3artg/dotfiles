@@ -135,3 +135,5 @@ command! -nargs=+ Et call EditTCs(<f-args>)
 command! Ct call ClearTC()
 cnoreabbrev et Et
 cnoreabbrev ct Ct
+autocmd BufNewFile,BufRead * set modifiable
+autocmd BufNewFile,BufRead *.out set nomodifiable
