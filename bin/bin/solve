@@ -7,7 +7,7 @@ import time
 
 commands = {
     'cpp': 'g++ %s -o run -O2 -Wall -static -std=gnu++17',
-    'py': 'echo "#!/usr/bin/env python3" > run; cat %s >> run; chmod 777 run; python3 -c "import py_compile; py_compile.compile(\'run\')"'
+    'py': 'echo "#!/usr/bin/env python3" > run; cat %s >> run; chmod u+x run; python3 -c "import py_compile; py_compile.compile(\'run\')"'
 }
 
 @click.command()
