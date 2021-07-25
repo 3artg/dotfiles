@@ -83,6 +83,11 @@ nnoremap <F5>      :update<CR>:!xclip -selection clipboard -rmlastnl %<CR>:!solv
 inoremap <F5> <ESC>:update<CR>:!xclip -selection clipboard -rmlastnl %<CR>:!solve %<CR>
 vnoremap <F5> <ESC>:update<CR>:!xclip -selection clipboard -rmlastnl %<CR>:!solve %<CR>
 
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 "Credit joshdick
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
