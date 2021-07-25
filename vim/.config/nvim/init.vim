@@ -123,10 +123,14 @@ function! EditTC(name)
 endfunction
 
 function! EditTCs(...)
-    " if bufname() == ''
-    "     e .
-    " endif
-    for s in a:000
+    let l:names = a:000
+    if a:0 == 0
+        let l:names = []
+        for name in split(globpath('.', '*.in'), '\n')
+            let l:names += [name[2:-4]]
+        endfor
+    endif
+    for s in l:names
         call EditTC(s)
     endfor
     execute "NERDTreeClose"
@@ -139,7 +143,7 @@ function! ClearTC()
     execute "NERDTreeRefreshRoot"
 endfunction
 
-command! -nargs=+ Et call EditTCs(<f-args>)
+command! -nargs=* Et call EditTCs(<f-args>)
 command! Ct call ClearTC()
 cnoreabbrev et Et
 cnoreabbrev ct Ct
