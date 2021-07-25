@@ -9,6 +9,7 @@ PATH=$PATH:~/bin
 
 export EDITOR=nvim
 export VISUAL=nvim
+export MANPAGER="nvim -c 'set ft=man' -"
 export GPG_TTY=$(tty)
 
 alias ls='ls --color=auto'
