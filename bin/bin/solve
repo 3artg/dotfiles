@@ -12,7 +12,7 @@ commands = {
 
 @click.command()
 @click.argument('filename', type=click.Path(exists=True))
-@click.option('--testcase-directory', '-tc', default='testcase', type=click.Path(exists=True),
+@click.option('--testcase-directory', '-tc', default='testcase', type=click.Path(),
               help='testcase directory')
 @click.option('--no-subdirectory', '-N', is_flag = True,
               help='directly find TCs in "testcase-directory/"' +
