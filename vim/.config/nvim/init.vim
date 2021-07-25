@@ -60,13 +60,29 @@ Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'rakr/vim-one'
 Plug 'ryanoasis/vim-devicons'
 Plug 'felleg/TeTrIs.vim'
-Plug 'sirver/ultisnips'
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'lambdalisue/suda.vim'
 let g:suda_smart_edit = 1
+Plug 'mhinz/vim-startify'
+let g:startify_bookmarks = [
+    \{'a': '~/workspace/algo'},
+    \{'d': '~/dotfiles'},
+    \{'i': '~/.config/nvim/init.vim'}
+    \]
+let g:startify_custom_header ='startify#center(startify#fortune#cowsay())'
+if has('nvim')
+  autocmd TabNewEntered * Startify
+else
+  autocmd BufWinEnter *
+        \ if !exists('t:startify_new_tab')
+        \     && empty(expand('%'))
+        \     && empty(&l:buftype)
+        \     && &l:modifiable |
+        \   let t:startify_new_tab = 1 |
+        \   Startify |
+        \ endif
+endif
+Plug 'aymericbeaumet/vim-symlink'
 call plug#end()
 
 cabbrev W write
