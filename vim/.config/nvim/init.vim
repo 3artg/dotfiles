@@ -123,9 +123,9 @@ function! EditTC(name)
 endfunction
 
 function! EditTCs(...)
-    if bufname() == ''
-        e .
-    endif
+    " if bufname() == ''
+    "     e .
+    " endif
     for s in a:000
         call EditTC(s)
     endfor
