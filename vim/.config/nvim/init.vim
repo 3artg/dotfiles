@@ -3,13 +3,18 @@ set encoding=utf-8
 set fileencoding=utf-8
 set shell=/bin/bash
 set showcmd
+set cmdheight=2
 set hidden
 set nofixeol
 set history=10000
 set wildmenu
 set wildmode=full
 set mouse=a
-set signcolumn=yes
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+    set signcolumn=number
+else
+    set signcolumn=yes
+endif
 set cursorline
 set nobackup
 set nowritebackup
@@ -18,6 +23,8 @@ set incsearch
 set ignorecase
 set smartcase
 set autoread
+set updatetime=300
+set shortmess+=c
 
 " Plugin
 if has('nvim')
@@ -129,6 +136,7 @@ function! ClearTC()
     silent execute "!rm *"
     execute ":only"
     execute ":e ."
+    execute "NERDTreeRefreshRoot"
 endfunction
 
 command! -nargs=+ Et call EditTCs(<f-args>)
