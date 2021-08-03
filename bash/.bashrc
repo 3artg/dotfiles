@@ -29,3 +29,6 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias vi='nvim'
 alias tmux='tmux -2'
+
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
