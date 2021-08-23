@@ -144,6 +144,14 @@ function! EditTC(name)
 endfunction
 
 function! EditTCs(...)
+    if bufname() !~ '.in\|.out\|.ans\|NERD_tree_\d*'
+        let l:path = './testcase/' . split(bufname(), '\')[0]
+        if !isdirectory(l:path)
+            execute '!mkdir -p ' . l:path
+        endif
+        execute "tabe " . l:path
+        execute ":tcd " . l:path
+    endif
     let l:names = a:000
     if a:0 == 0
         let l:names = []
@@ -154,7 +162,9 @@ function! EditTCs(...)
     for s in l:names
         call EditTC(s)
     endfor
-    execute "NERDTreeClose"
+    if bufname() !~# 'NERD_tree'
+        execute "NERDTreeClose"
+    endif
 endfunction
 
 function! ClearTC()
