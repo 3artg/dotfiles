@@ -65,10 +65,11 @@ Plug 'lambdalisue/suda.vim'
 let g:suda_smart_edit = 1
 Plug 'mhinz/vim-startify'
 let g:startify_bookmarks = [
-    \{'a': '~/workspace/algo'},
-    \{'d': '~/dotfiles'},
-    \{'i': '~/.config/nvim/init.vim'}
-    \]
+    \ {'a': '~/workspace/algo'},
+    \ {'d': '~/dotfiles'},
+    \ {'i': '~/.config/nvim/init.vim'},
+    \ {'t': '~/TODO.md'}
+    \ ]
 let g:startify_custom_header ='startify#center(startify#fortune#cowsay())'
 if has('nvim')
   autocmd TabNewEntered * Startify
