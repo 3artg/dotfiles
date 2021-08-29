@@ -72,9 +72,9 @@ let g:startify_bookmarks = [
     \ ]
 let g:startify_custom_header ='startify#center(startify#fortune#cowsay())'
 if has('nvim')
-  autocmd TabNewEntered * Startify
+    autocmd TabNewEntered * if bufname() == '' | Startify | endif
 else
-  autocmd BufWinEnter *
+    autocmd BufWinEnter *
         \ if !exists('t:startify_new_tab')
         \     && empty(expand('%'))
         \     && empty(&l:buftype)
