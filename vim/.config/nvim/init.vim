@@ -146,7 +146,7 @@ function! EditTC(name)
 endfunction
 
 function! EditTCs(...)
-    if bufname() !~ '.in\|.out\|.ans\|NERD_tree_\d*'
+    if bufname() !~ '.in$\|.out$\|.ans$\|^NERD_tree_\d*'
         let l:path = './testcase/' . substitute(bufname(), '\v(_|\.).*', '', '')
         if !isdirectory(l:path)
             execute '!mkdir -p ' . l:path
