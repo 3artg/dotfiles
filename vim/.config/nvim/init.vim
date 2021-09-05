@@ -84,6 +84,8 @@ else
         \ endif
 endif
 Plug 'aymericbeaumet/vim-symlink'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 cabbrev W write
