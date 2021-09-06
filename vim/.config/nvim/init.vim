@@ -86,6 +86,11 @@ endif
 Plug 'aymericbeaumet/vim-symlink'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'rhysd/clever-f.vim'
+map ; <Plug>(clever-f-repeat-forward)
+map , <Plug>(clever-f-repeat-back)
+Plug 'easymotion/vim-easymotion'
+Plug 'farmergreg/vim-lastplace'
 call plug#end()
 
 cabbrev W write
