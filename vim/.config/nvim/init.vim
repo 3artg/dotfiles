@@ -84,6 +84,7 @@ else
         \   Startify |
         \ endif
 endif
+autocmd User Startified nmap <buffer> . :e .<CR>
 Plug 'aymericbeaumet/vim-symlink'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
