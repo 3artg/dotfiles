@@ -33,4 +33,4 @@ alias tmux='tmux -2'
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 
-export FZF_ALT_C_COMMAND='rg --hidden --files --null | xargs -0 dirname | uniq'
+export FZF_ALT_C_COMMAND='fd --type directory --hidden | sed -En "/^\\./{H;b}; p; \${g;s/^\\n//;T;p}"'
