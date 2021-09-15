@@ -13,7 +13,7 @@ export MANPAGER="nvim -c 'set ft=man' -"
 export GPG_TTY=$(tty)
 
 alias ls='ls --color=auto'
-PS1='\e[m[\u@\h \W]\e[93m\$\e[m '
+PS1='\[\e[m\][\u@\h \W]\[\e[93m\]\$\[\e[m\] '
 
 alias ..='cd ..'
 alias ...='cd ../..'
