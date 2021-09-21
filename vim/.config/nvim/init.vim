@@ -93,6 +93,7 @@ map ; <Plug>(clever-f-repeat-forward)
 map , <Plug>(clever-f-repeat-back)
 Plug 'easymotion/vim-easymotion'
 Plug 'farmergreg/vim-lastplace'
+Plug 'gcmt/taboo.vim'
 call plug#end()
 
 cabbrev W write
@@ -155,13 +156,16 @@ function! EditTC(name)
 endfunction
 
 function! EditTCs(...)
-    if bufname() !~ '.in$\|.out$\|.ans$\|^NERD_tree_\d*'
-        let l:path = './testcase/' . substitute(bufname(), '\v(_|\.).*', '', '')
+    if !exists("t:is_tctab")
+        let l:pname = substitute(bufname(), '\v(_|\.).*', '', '')
+        let l:path = './testcase/' . l:pname
         if !isdirectory(l:path)
             execute '!mkdir -p ' . l:path
         endif
         execute "tabe " . l:path
         execute ":tcd " . l:path
+        execute "TabooRename " . "TC:" . l:pname
+        let t:is_tctab = 1
     endif
     let l:names = a:000
     if a:0 == 0
