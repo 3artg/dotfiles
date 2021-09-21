@@ -185,8 +185,16 @@ function! ClearTC()
     execute "NERDTreeRefreshRoot"
 endfunction
 
+function! CloseTC()
+    windo bd
+endfunction
+
+function! DeleteTC()
+    echo pass
+endfunction
+
 command! -nargs=* Et call EditTCs(<f-args>)
-command! Ct call ClearTC()
+command! Ct call CloseTC()
 cnoreabbrev et Et
 cnoreabbrev ct Ct
 
