@@ -23,7 +23,7 @@ set incsearch
 set ignorecase
 set smartcase
 set autoread
-set updatetime=300
+set updatetime=100
 set shortmess+=c
 
 " Plugin
