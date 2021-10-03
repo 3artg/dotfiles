@@ -26,6 +26,10 @@ set autoread
 set updatetime=100
 set shortmess+=c
 
+if has('persistent_undo')
+    set undofile
+endif
+
 " Plugin
 if has('nvim')
     let autoload_path = '~/.local/share/nvim/site/autoload/plug.vim'
