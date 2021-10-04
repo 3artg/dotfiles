@@ -98,6 +98,7 @@ map , <Plug>(clever-f-repeat-back)
 Plug 'easymotion/vim-easymotion'
 Plug 'farmergreg/vim-lastplace'
 Plug 'gcmt/taboo.vim'
+Plug 'vim-scripts/LargeFile'
 call plug#end()
 
 cabbrev W write
