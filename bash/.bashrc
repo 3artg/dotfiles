@@ -34,3 +34,5 @@ source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 
 export FZF_ALT_C_COMMAND='fd --type directory --hidden | sed -En "/^\\./{H;b}; p; \${g;s/^\\n//;T;p}"'
+
+mdcat ~/TODO.md
