@@ -7,6 +7,10 @@
 
 PATH=$PATH:~/bin
 
+export HISTCONTROL=ignoreboth
+export HISTSIZE=1000000
+export HISTFILESIZE=1000000000
+
 export EDITOR=nvim
 export VISUAL=nvim
 export MANPAGER="nvim -c 'set ft=man' -"
