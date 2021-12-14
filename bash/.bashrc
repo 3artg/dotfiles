@@ -13,7 +13,7 @@ export HISTFILESIZE=1000000000
 
 export EDITOR=nvim
 export VISUAL=nvim
-export MANPAGER="nvim -c 'set ft=man' -"
+export MANPAGER="nvim +Man!"
 export GPG_TTY=$(tty)
 
 alias ls='ls --color=auto'
