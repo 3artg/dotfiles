@@ -7,6 +7,7 @@
 
 PATH=$PATH:~/bin
 
+shopt -s histappend
 export HISTCONTROL=ignoreboth
 export HISTSIZE=1000000
 export HISTFILESIZE=1000000000
