@@ -100,6 +100,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'farmergreg/vim-lastplace'
 Plug 'gcmt/taboo.vim'
 Plug 'vim-scripts/LargeFile'
+Plug 'alvan/vim-closetag'
+let g:clsoetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+let g:closetag_filetypes = 'html,xhtml,phtml,javascript'
 call plug#end()
 
 cabbrev W write
