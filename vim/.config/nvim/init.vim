@@ -103,6 +103,8 @@ Plug 'vim-scripts/LargeFile'
 Plug 'alvan/vim-closetag'
 let g:clsoetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 let g:closetag_filetypes = 'html,xhtml,phtml,javascript'
+Plug 'wfxr/minimap.vim'
+let g:minimap_auto_start = 1
 call plug#end()
 
 cabbrev W write
