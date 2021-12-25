@@ -63,6 +63,7 @@ let g:NERDDefaultAlign = 'left'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:polyglot_disabled = ['sensible']
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'rakr/vim-one'
@@ -108,6 +109,11 @@ let g:clsoetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 let g:closetag_filetypes = 'html,xhtml,phtml,javascript'
 Plug 'wfxr/minimap.vim'
 let g:minimap_auto_start = 1
+Plug 'nathanaelkane/vim-indent-guides'
+nmap <leader>i <Plug>IndentGuidesToggle
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_default_mapping = 0
 call plug#end()
 
 cabbrev W write
@@ -129,6 +135,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-q> <C-w>q
+
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 "Credit joshdick
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -160,6 +169,8 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+
+autocmd FileType javascript setlocal ts=2 sw=2 sts=0 et
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
