@@ -25,6 +25,8 @@ set smartcase
 set autoread
 set updatetime=100
 set shortmess+=c
+set textwidth=80
+set colorcolumn=+1,+2,+3
 
 if has('persistent_undo')
     set undofile
