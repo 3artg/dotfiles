@@ -170,7 +170,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-autocmd FileType javascript setlocal ts=2 sw=2 sts=0 et
+autocmd FileType html,css,javascript setlocal ts=2 sw=2 sts=0 et
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
