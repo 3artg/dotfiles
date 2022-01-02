@@ -33,6 +33,7 @@ alias ll='lsd -Al'
 alias mv='mv -i'
 alias cp='cp -i'
 alias vi='nvim'
+alias grep='grep --color=auto'
 alias tmux='tmux -2'
 
 source /usr/share/fzf/key-bindings.bash
