@@ -75,6 +75,7 @@ let g:suda_smart_edit = 1
 Plug 'mhinz/vim-startify'
 let g:startify_bookmarks = [
     \ {'a': '~/workspace/algo'},
+    \ {'b': '~/.bashrc'},
     \ {'d': '~/dotfiles'},
     \ {'i': '~/.config/nvim/init.vim'},
     \ {'t': '~/TODO.md'}
