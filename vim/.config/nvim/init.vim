@@ -28,6 +28,7 @@ set shortmess+=c
 set textwidth=80
 set formatoptions-=t
 set colorcolumn=+1,+2,+3
+set scrolloff=3
 
 if has('persistent_undo')
     set undofile
