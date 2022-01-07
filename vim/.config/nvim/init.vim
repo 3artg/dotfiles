@@ -137,8 +137,18 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-q> <C-w>q
 
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+
+" <C-_> is <C-/>
+nmap <leader>c<space> <Plug>NERDCommenterToggle
+imap <leader>c<space> <Plug>NERDCommenterToggle
+vmap <leader>c<space> <Plug>NERDCommenterToggle
+nmap <C-_> <Plug>NERDCommenterToggle
+imap <C-_> <Plug>NERDCommenterToggle
+vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 
 "Credit joshdick
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
