@@ -108,12 +108,11 @@ Plug 'vim-scripts/LargeFile'
 Plug 'alvan/vim-closetag'
 let g:clsoetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 let g:closetag_filetypes = 'html,xhtml,phtml,javascript'
-Plug 'wfxr/minimap.vim'
-let g:minimap_auto_start = 1
 Plug 'nathanaelkane/vim-indent-guides'
 nmap <leader>i <Plug>IndentGuidesToggle
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
 let g:indent_guides_default_mapping = 0
 call plug#end()
 
