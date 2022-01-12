@@ -29,6 +29,7 @@ set textwidth=80
 set formatoptions-=t
 set colorcolumn=+1,+2,+3
 set scrolloff=3
+set nowrap
 
 if has('persistent_undo')
     set undofile
