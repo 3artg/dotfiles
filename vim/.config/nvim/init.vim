@@ -1,3 +1,6 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 set encoding=utf-8
 set fileencoding=utf-8
@@ -35,7 +38,25 @@ if has('persistent_undo')
     set undofile
 endif
 
-" Plugin
+if has("syntax")
+    syntax on
+endif
+
+set autoindent
+set cindent
+
+set number
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+autocmd FileType html,css,javascript setlocal ts=2 sw=2 sts=0 et
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('nvim')
     let autoload_path = '~/.local/share/nvim/site/autoload/plug.vim'
 else
@@ -122,11 +143,35 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify']
 Plug 'ap/vim-css-color'
 Plug 'styled-components/vim-styled-components'
 Plug 'junegunn/fzf.vim'
+nnoremap <C-p> :Files<CR>
 call plug#end()
 
-nnoremap <C-p> :Files<CR>
 
-"================
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Credit joshdick
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (has("nvim"))
+"For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+if (has("termguicolors"))
+    set termguicolors
+endif
+
+set background=dark
+colorscheme ayu
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cabbrev W write
 cabbrev ㅈ write
 cabbrev ㅂ quit
@@ -163,39 +208,6 @@ vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 nnoremap <expr> <C-g> "<ESC>" . (v:count+2)%3 . "<C-g>"
 nnoremap ; :
 
-"Credit joshdick
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
-if (has("nvim"))
-"For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
-"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-if (has("termguicolors"))
-    set termguicolors
-endif
-
-set background=dark
-colorscheme ayu
-
-if has("syntax")
-    syntax on
-endif
-
-set autoindent
-set cindent
-
-set number
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-
-autocmd FileType html,css,javascript setlocal ts=2 sw=2 sts=0 et
-
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
@@ -210,6 +222,10 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 let g:coc_snippet_prev = '<s-tab>'
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Misc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! EditTC(name)
     silent execute "!touch" a:name . ".in" a:name . ".out" a:name . ".ans"
     execute "split" a:name . ".ans"
