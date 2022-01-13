@@ -193,6 +193,24 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-q> <C-w>q
 
+nnoremap <silent> <a--> :split<CR>
+nnoremap <silent> <a-\> :vertical split<CR>
+nnoremap <silent> <a-h> :vertical resize -5<CR>
+nnoremap <silent> <a-j> :resize -3<CR>
+nnoremap <silent> <a-k> :resize +3<CR>
+nnoremap <silent> <a-l> :vertical resize +5<CR>
+nnoremap <a-t> :tabnew<CR>
+nnoremap <a-T> :-tabnew<CR>
+nnoremap <a-1> 1gt
+nnoremap <a-2> 2gt
+nnoremap <a-3> 3gt
+nnoremap <a-4> 4gt
+nnoremap <a-5> 5gt
+nnoremap <a-6> 6gt
+nnoremap <a-7> 7gt
+nnoremap <a-8> 8gt
+nnoremap <a-9> 9gt-
+
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
 vnoremap <Tab> >gv
