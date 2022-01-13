@@ -226,6 +226,7 @@ vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 
 nnoremap <expr> <C-g> "<ESC>" . (v:count+2)%3 . "<C-g>"
 nnoremap ; :
+nnoremap <silent> <ESC><ESC> <ESC>:nohlsearch<CR>
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
