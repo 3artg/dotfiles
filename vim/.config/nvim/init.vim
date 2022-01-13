@@ -50,9 +50,10 @@ endif
 
 let mapleader=","
 call plug#begin('~/.vim/plugged')
+Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
-let g:airline_powerline_fonts = 1
-Plug 'tpope/vim-fugitive'
+let g:airline#extensions#tabline#enabled = 1
+" Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
@@ -68,8 +69,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:polyglot_disabled = ['sensible']
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
 Plug 'rakr/vim-one'
-Plug 'ryanoasis/vim-devicons'
 Plug 'felleg/TeTrIs.vim'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'lambdalisue/suda.vim'
@@ -117,8 +119,14 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_default_mapping = 0
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify']
+Plug 'ap/vim-css-color'
+Plug 'styled-components/vim-styled-components'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
+nnoremap <C-p> :Files<CR>
+
+"================
 cabbrev W write
 cabbrev ㅈ write
 cabbrev ㅂ quit
@@ -168,7 +176,7 @@ if (has("termguicolors"))
 endif
 
 set background=dark
-colorscheme dracula
+colorscheme ayu
 
 if has("syntax")
     syntax on
