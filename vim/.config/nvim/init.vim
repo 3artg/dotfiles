@@ -160,6 +160,9 @@ nmap <C-_> <Plug>NERDCommenterToggle
 imap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 
+nnoremap <expr> <C-g> "<ESC>" . (v:count+2)%3 . "<C-g>"
+nnoremap ; :
+
 "Credit joshdick
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
