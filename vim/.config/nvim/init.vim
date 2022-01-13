@@ -173,6 +173,7 @@ colorscheme ayu
 " Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cabbrev W write
+cabbrev Wq wq
 cabbrev ㅈ write
 cabbrev ㅂ quit
 cabbrev ㅈㅂ wq
