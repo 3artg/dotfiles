@@ -3,7 +3,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 set shell=/bin/bash
 set showcmd
-set cmdheight=2
 set hidden
 set nofixeol
 set history=10000
@@ -30,6 +29,7 @@ set formatoptions-=t
 set colorcolumn=+1,+2,+3
 set scrolloff=3
 set nowrap
+set signcolumn=yes
 
 if has('persistent_undo')
     set undofile
