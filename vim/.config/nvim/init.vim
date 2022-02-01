@@ -183,6 +183,13 @@ nnoremap <C-s>      :update<CR>
 inoremap <C-s> <ESC>:update<CR>
 vnoremap <C-S> <ESC>:update<CR>
 
+inoremap <C-a> <C-o>^
+inoremap <C-e> <C-o>$
+nnoremap <C-a> ^
+nnoremap <C-e> $
+vnoremap <C-a> ^
+vnoremap <C-e> $
+
 nnoremap <F5>      :update<CR>:!cat % \| sed '/^\s*$/d' \| xclip -selection clipboard -rmlastnl<CR>:!solve %<CR>
 inoremap <F5> <ESC>:update<CR>:!cat % \| sed '/^\s*$/d' \| xclip -selection clipboard -rmlastnl<CR>:!solve %<CR>
 vnoremap <F5> <ESC>:update<CR>:!cat % \| sed '/^\s*$/d' \| xclip -selection clipboard -rmlastnl<CR>:!solve %<CR>
