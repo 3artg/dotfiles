@@ -69,7 +69,7 @@ if empty(glob(autoload_path))
     autocmd VimEnter * PlugInstall --sync
 endif
 
-let mapleader=","
+let mapleader=" "
 call plug#begin('~/.vim/plugged')
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
