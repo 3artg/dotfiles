@@ -174,6 +174,7 @@ colorscheme ayu
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cabbrev W write
 cabbrev Wq wq
+cabbrev Qa qa
 cabbrev ㅈ write
 cabbrev ㅂ quit
 cabbrev ㅈㅂ wq
