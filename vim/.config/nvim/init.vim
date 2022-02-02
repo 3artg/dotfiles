@@ -180,6 +180,8 @@ cabbrev ㅂ quit
 cabbrev ㅈㅂ wq
 cabbrev ㅂㅁ qa
 
+inoremap jk <ESC>
+
 nnoremap <C-s>      :update<CR>
 inoremap <C-s> <ESC>:update<CR>
 vnoremap <C-S> <ESC>:update<CR>
