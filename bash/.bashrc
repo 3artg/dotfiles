@@ -27,6 +27,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias c='clear'
 alias e="$EDITOR"
+alias E="nvim -u NONE"
 alias ls='lsd'
 alias l='lsd -l'
 alias ll='lsd -Al'
@@ -35,6 +36,7 @@ alias cp='cp -i'
 alias vi='nvim'
 alias grep='grep --color=auto'
 alias tmux='tmux -2'
+alias cat='pygmentize -g -O style=dracula'
 
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
