@@ -145,6 +145,8 @@ Plug 'ap/vim-css-color'
 Plug 'styled-components/vim-styled-components'
 Plug 'junegunn/fzf.vim'
 nnoremap <C-p> :Files<CR>
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-endwise'
 call plug#end()
 
 
