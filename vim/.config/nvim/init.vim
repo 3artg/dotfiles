@@ -94,7 +94,6 @@ Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
 Plug 'rakr/vim-one'
-Plug 'felleg/TeTrIs.vim'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'lambdalisue/suda.vim'
 let g:suda_smart_edit = 1
