@@ -45,7 +45,7 @@ endif
 set autoindent
 set cindent
 
-set number
+set number relativenumber
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
