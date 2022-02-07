@@ -141,7 +141,6 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_default_mapping = 0
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify']
-Plug 'ap/vim-css-color'
 Plug 'styled-components/vim-styled-components'
 Plug 'junegunn/fzf.vim'
 nnoremap <C-p> :Files<CR>
