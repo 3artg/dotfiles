@@ -102,6 +102,7 @@ let g:startify_bookmarks = [
     \ {'a': '~/workspace/algo'},
     \ {'b': '~/.bashrc'},
     \ {'d': '~/dotfiles'},
+    \ {'g': '~/.gitconfig'},
     \ {'i': '~/.config/nvim/init.vim'},
     \ {'t': '~/TODO.md'}
     \ ]
