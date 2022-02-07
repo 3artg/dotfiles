@@ -81,6 +81,7 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeChDirMode = 3
 let g:NERDTreeUseTCD = 1
 let g:NERDTreeMinimalUI = 1
+let g:NERDTreeWinPos = "right"
 Plug 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
