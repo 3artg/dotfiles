@@ -168,7 +168,7 @@ if (has("termguicolors"))
 endif
 
 set background=dark
-colorscheme ayu
+colorscheme gruvbox
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
