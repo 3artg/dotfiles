@@ -190,7 +190,7 @@ vnoremap <C-S> <ESC>:update<CR>
 
 inoremap <C-a> <C-o>^
 inoremap <C-e> <C-o>$
-nnoremap <C-a> ^
+" nnoremap <C-a> ^
 nnoremap <C-e> $
 vnoremap <C-a> ^
 vnoremap <C-e> $
