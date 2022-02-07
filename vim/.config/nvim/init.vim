@@ -228,10 +228,11 @@ nnoremap <S-Tab> <<
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-" <C-_> is <C-/>
+nnoremap <silent> <expr> <leader><leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
 nmap <leader>c<space> <Plug>NERDCommenterToggle
-imap <leader>c<space> <Plug>NERDCommenterToggle
 vmap <leader>c<space> <Plug>NERDCommenterToggle
+
+" <C-_> is <C-/>
 nmap <C-_> <Plug>NERDCommenterToggle
 imap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
