@@ -1,21 +1,21 @@
 [user]
-	email = ganghe74@gmail.com
-	name = ganghe74
-	signingkey = 804158AF35BE6B54
+    email = ganghe74@gmail.com
+    name = KH
+    signingkey = 804158AF35BE6B54
 [push]
-	default = simple
+    default = simple
 [color]
-	ui = auto
+    ui = auto
 [core]
-	quotepath = off
-	editor = nvim
+    quotepath = off
+    editor = nvim
 [commit]
-	gpgsign = false
+    gpgsign = false
 [gpg]
-	program = gpg
+    program = gpg
 [alias]
-	s = status
-	co = checkout
-	ci = commit
-	br = branch
+    s = status
+    co = checkout
+    ci = commit
+    br = branch
     l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit -10
