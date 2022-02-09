@@ -128,6 +128,7 @@ Plug 'rhysd/clever-f.vim'
 map ; <Plug>(clever-f-repeat-forward)
 map , <Plug>(clever-f-repeat-back)
 Plug 'easymotion/vim-easymotion'
+map <leader> <Plug>(easymotion-prefix) " test. it should be chagned but i have no good idea.
 Plug 'farmergreg/vim-lastplace'
 Plug 'gcmt/taboo.vim'
 Plug 'vim-scripts/LargeFile'
