@@ -124,6 +124,7 @@ autocmd User Startified nmap <buffer> . :e .<CR>
 Plug 'aymericbeaumet/vim-symlink'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'AndrewRadev/dsf.vim'
 Plug 'rhysd/clever-f.vim'
 map ; <Plug>(clever-f-repeat-forward)
 map , <Plug>(clever-f-repeat-back)
