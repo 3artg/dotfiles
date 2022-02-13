@@ -33,6 +33,7 @@ set colorcolumn=+1,+2,+3
 set scrolloff=3
 set nowrap
 set signcolumn=yes
+set list
 
 if has('persistent_undo')
     set undofile
