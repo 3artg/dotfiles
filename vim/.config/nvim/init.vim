@@ -226,6 +226,7 @@ nnoremap <a-7> 7gt
 nnoremap <a-8> 8gt
 nnoremap <a-9> 9gt-
 
+inoremap <S-Tab> <C-d>
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
 vnoremap <Tab> >gv
