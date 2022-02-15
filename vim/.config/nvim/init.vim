@@ -147,6 +147,7 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify']
 Plug 'styled-components/vim-styled-components'
 Plug 'junegunn/fzf.vim'
 nnoremap <C-p> :Files<CR>
+nnoremap <Leader>ag :Ag<CR>
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-endwise'
 call plug#end()
