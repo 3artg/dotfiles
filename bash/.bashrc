@@ -37,6 +37,9 @@ alias vi='nvim'
 alias grep='grep --color=auto'
 alias tmux='tmux -2'
 alias cat='pygmentize -g -O style=dracula'
+alias s='solve'
+alias run='solve run'
+alias get='solve get'
 
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
