@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PATH=$PATH:~/bin
+PATH=$PATH:~/.local/bin:~/bin
 
 shopt -s histappend
 export HISTCONTROL=ignoreboth
