@@ -40,6 +40,13 @@ alias cat='pygmentize -g -O style=dracula'
 alias s='solve'
 alias run='solve run'
 alias get='solve get'
+if [[ $TERM_PROGRAM == 'vscode' ]]; then
+  alias wa='solve diff -t "code --diff"'
+  alias tc='solve tc -t code'
+else
+  alias wa='solve diff -t "nvim -d"'
+  alias tc='solve tc -t nvim'
+fi
 
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
