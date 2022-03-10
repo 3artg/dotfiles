@@ -1,14 +1,154 @@
 {
-    "editor.fontFamily": "D2Coding",
-    "editor.fontSize": 16,
-    "files.encoding": "utf8",
-    "code-runner.executorMap":{
-        "java": "cd $dir && javac \"$fileName\" -encoding UTF-8 && java \"$fileNameWithoutExt\" -encoding UTF-8",
-        "c": "cd $dir && gcc \"$fileName\" -o \"$fileNameWithoutExt\" && ./\"$fileNameWithoutExt\"",
-        "cpp": "cd $dir && g++ \"$fileName\" -o \"$fileNameWithoutExt\" -O2 -std=gnu++17  && ./\"$fileNameWithoutExt\"",
-        "python": "cd $dir && python \"$fileName\"",
+   "remote.SSH.remotePlatform": {
+        "5": "linux",
     },
-    "code-runner.runInTerminal": true,
-    "code-runner.saveFileBeforeRun": true,
-    "code-runner.clearPreviousOutput": false,
-}
+    "workbench.colorTheme": "Dracula",
+    "editor.fontFamily": "'BlexMono NF', 'JetBrainsMono NF', D2Coding",
+    "editor.fontLigatures": true,
+    "editor.cursorSurroundingLines": 3,
+    "editor.rulers": [80, 90],
+    "editor.renderWhitespace": "trailing",
+    "editor.lineNumbers": "relative",
+    // "workbench.colorCustomizations": {
+    //     "statusBar.background": "#005f5f",
+    //     "statusBar.noFolderBackground": "#005f5f",
+    //     "statusBar.debuggingBackground": "#005f5f"
+    // },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tabSize": 2,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "workbench.iconTheme": "ayu",
+    "vscode-neovim.neovimExecutablePaths.win32": "C:\\Users\\gangh\\scoop\\apps\\neovim\\current\\bin\\nvim.exe",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.smoothScrolling": true,
+    
+    "vim.statusBarColorControl": true,
+    "vim.camelCaseMotion.enable": true,
+    "vim.searchHighlightColor": "rgba(80,250,123,1)",
+    "vim.searchHighlightTextColor": "rgb(68,71,90)",
+    "vim.autoSwitchInputMethod.switchIMCmd": "C:\\Users\\gangh\\bin\\TOENG.ahk {im}",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\Users\\gangh\\bin\\im-select.exe",
+    "vim.autoSwitchInputMethod.defaultIM": "0",
+    // "workbench.list.automaticKeyboardNavigation": false
+    "vim.hlsearch": true,
+    "vim.leader": " ",
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // {
+        //     "before": ["<c-h>"],
+        //     "after": ["<c-w>", "h"]
+        // },
+        // {
+        //     "before": ["<c-j>"],
+        //     "after": ["<c-w>", "j"]
+        // },
+        // {
+        //     "before": ["<c-k>"],
+        //     "after": ["<c-w>", "k"]
+        // },
+        // {
+        //     "before": ["<c-l>"],
+        //     "after": ["<c-w>", "l"]
+        // },
+        {
+            "before": ["<c-q>"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["<esc>", "<esc>"],
+            "commands": [":nohl"]
+        },
+        {
+            "before": ["<tab>"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<s-tab>"],
+            "commands": ["editor.action.outdentLines"]
+        },
+        {
+            "before": ["<leader>", "c"],
+            "commands": ["editor.action.commentLine"]
+        },
+        {
+            "before": ["<leader>", ","],
+            "commands": ["workbench.action.openSettings"]
+        },
+        {
+            "before": ["<c-n>"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["<leader>", "p"],
+            "after": ["o", "<c-r>", "+", "<esc>"]
+        },
+        {
+            "before": ["<leader>", "P"],
+            "after": ["O", "<c-r>", "+", "<esc>"]
+        },
+        {
+            "before": ["<leader>", "s", "n"],
+            "commands": [":set nu!"]
+        },
+        {
+            "before": ["<leader>", "s", "r", "n"],
+            "commands": [":set rnu!"]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<tab>"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<s-tab>"],
+            "commands": ["editor.action.outdentLines"]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<c-a>"],
+            "after": ["<c-o>", "^"]
+        },
+        {
+            "before": ["<c-e>"],
+            "after": ["<c-o>", "$"]
+        },
+        {
+            "before": ["j", "k"],
+            "after": ["<esc>"],
+        },
+        {
+            "before": ["ㅓ", "ㅏ"],
+            "after": ["<esc>"],
+        },
+    ],
+    "vim.handleKeys": {
+        "<Del>": false, // ?
+        "<C-k>": false,
+        "<C-,>": false,   // not working....
+        "<c-,>": false,   // not working....
+        "<Ctrl-,>": false // not working....
+    },
+    "workbench.list.automaticKeyboardNavigation": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#5f0000",
+        "statusBar.noFolderBackground": "#5f0000",
+        "statusBar.debuggingBackground": "#5f0000"
+    },
+    "workbench.sideBar.location": "right",
+    "editor.snippetSuggestions": "top",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2 }",
+    "workbench.editor.focusRecentEditorAfterClose": false,
+} 
