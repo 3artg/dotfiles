@@ -37,7 +37,7 @@ alias vi='nvim'
 alias grep='grep --color=auto'
 alias tmux='tmux -2'
 alias s='solve'
-alias run='solve run'
+alias run='solve run --copytool copy'
 alias get='solve get'
 if [[ $TERM_PROGRAM == 'vscode' ]]; then
   alias wa='solve diff -t "code --diff"'
