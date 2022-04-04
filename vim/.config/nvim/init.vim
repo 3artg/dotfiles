@@ -105,7 +105,8 @@ let g:startify_bookmarks = [
     \ {'d': '~/dotfiles'},
     \ {'g': '~/.gitconfig'},
     \ {'i': '~/.config/nvim/init.vim'},
-    \ {'t': '~/TODO.md'}
+    \ {'t': '~/TODO.md'},
+    \ {'z': '~/.zshrc'}
     \ ]
 let g:startify_custom_header ='startify#center(startify#fortune#cowsay())'
 if has('nvim')
