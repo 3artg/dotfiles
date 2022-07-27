@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 set encoding=utf-8
-set fileencoding=utf-8
+set fileencodings=utf-8,euc-kr
 set shell=/bin/bash
 set showcmd
 set hidden
