@@ -200,9 +200,9 @@ nnoremap <C-e> $
 vnoremap <C-a> ^
 vnoremap <C-e> $
 
-nnoremap <F5>      :update<CR>:!cat % \| sed '/^\s*$/d' \| xclip -selection clipboard -rmlastnl<CR>:!solve %<CR>
-inoremap <F5> <ESC>:update<CR>:!cat % \| sed '/^\s*$/d' \| xclip -selection clipboard -rmlastnl<CR>:!solve %<CR>
-vnoremap <F5> <ESC>:update<CR>:!cat % \| sed '/^\s*$/d' \| xclip -selection clipboard -rmlastnl<CR>:!solve %<CR>
+nnoremap <F5>      :update<CR>:!cat % \| sed '/^\s*$/d' \| xclip -selection clipboard -rmlastnl<CR>:!solve run %<CR>
+inoremap <F5> <ESC>:update<CR>:!cat % \| sed '/^\s*$/d' \| xclip -selection clipboard -rmlastnl<CR>:!solve run %<CR>
+vnoremap <F5> <ESC>:update<CR>:!cat % \| sed '/^\s*$/d' \| xclip -selection clipboard -rmlastnl<CR>:!solve run %<CR>
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
