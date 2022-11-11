@@ -71,6 +71,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  fzf
   git
   python
   zsh-autosuggestions
@@ -123,9 +124,12 @@ export VISUAL=nvim
 export MANPAGER="nvim +Man!"
 export GPG_TTY=$(tty)
 
+export FZF_BASE=~/.fzf
+export FZF_DEFAULT_COMMAND='fd'
+export FZF_ALT_C_COMMAND='fdfind --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
+
 alias ls='ls --color=auto'
 # PS1='\[\e[m\][\u@\h \W]\[\e[93m\]\$\[\e[m\] '
-PS1=mini\ $PS1
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -157,7 +161,6 @@ else
 fi
 alias fd='fdfind'
 
-export FZF_ALT_C_COMMAND='fdfind --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
 
 [ -f ~/.fzf/shell/completion.zsh ] && source ~/.fzf/shell/completion.zsh
 [ -f ~/.fzf/shell/key-bindings.zsh ] && source ~/.fzf/shell/key-bindings.zsh
