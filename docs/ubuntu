@@ -1,5 +1,8 @@
 htop git gcc make ssh curl stow neovim tmux fd-find ripgrep xclip caffeine
-rename zsh grub-customizer tree neofetch cloc figlet byobu ibus-hangul
-fonts-noto-cjk fonts-nanum\*
+rename zsh tree neofetch cloc figlet byobu tldr
 
+for desktop
+ibus-hangul fonts-noto-cjk fonts-nanum\* grub-customizer 
+
+etc
 lsd kime fzf the_silver_searcher
