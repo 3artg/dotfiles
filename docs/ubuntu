@@ -1,5 +1,5 @@
 htop git gcc make ssh curl stow neovim tmux xclip caffeine
-rename zsh tree neofetch cloc figlet byobu tldr man
+rename zsh tree neofetch cloc figlet byobu tldr man software-properties-common
 
 20+
 fd-find ripgrep 
