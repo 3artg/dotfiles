@@ -52,7 +52,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/cu
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
-rm ~/.bashrc ~/.zshrc
+mv ~/.bashrc ~/.bashrc.bak
+mv ~/.zshrc ~/.zshrc.bak
 stow bash bin git ssh vim zsh
 
 source ~/.zshrc
