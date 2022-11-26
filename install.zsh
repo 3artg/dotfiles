@@ -16,6 +16,11 @@ fi
 $SUDO apt update
 cat docs/ubuntu | awk -v 'RS=\n\n' '1;{exit}' | xargs $SUDO apt install -y
 
+# neovim
+$SUDO add-apt-repository ppa:neovim-ppa/stable
+$SUDO apt update
+$SUDO apt install -y neovim
+
 # nodejs
 curl -fsSL https://deb.nodesource.com/setup_19.x | $SUDO -E bash - &&\
 $SUDO apt-get install -y nodejs
