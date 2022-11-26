@@ -1,5 +1,11 @@
 #!/bin/zsh
 
+if [[ ! $(lsb_release -d) =~ '.*Ubuntu 18.04.05 LTS' ]]; then
+  echo 'This script is for Ubuntu 18.04.05 LTS. (aistages)'
+  echo 'Current OS:' $(lsb_release -d | cut -f2)
+  exit
+fi
+
 if [[ $(pwd) != *dotfiles ]]; then
   echo 'SHOULD BE AT DOTFILES'
   exit
@@ -10,6 +16,7 @@ if (( $EUID != 0 )); then
   SUDO='sudo'
 fi
 
+# fast repo server
 # cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
 # default
@@ -30,6 +37,11 @@ $SUDO npm i -g serve
 curl -LJo lsd.deb https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb
 $SUDO dpkg -i lsd.deb
 rm lsd.deb
+
+# fd
+curl -LJo fd.deb https://github.com/sharkdp/fd/releases/download/v8.5.3/fd_8.5.3_amd64.deb
+$SUDO dpkg -i fd.deb
+rm fd.deb
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
