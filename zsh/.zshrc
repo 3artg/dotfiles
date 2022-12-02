@@ -119,7 +119,7 @@ source $ZSH/oh-my-zsh.sh
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PATH=$PATH:~/.local/bin:~/bin
+PATH=$PATH:~/.local/bin:~/.bin
 
 # shopt -s histappend
 export HISTCONTROL=ignoreboth
