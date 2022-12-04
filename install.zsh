@@ -18,8 +18,8 @@ fi
 
 # fast repo server
 $SUDO cp /etc/apt/sources.list /etc/apt/sources.list.bak
-$SUDO sed -i 's|/archive.ubuntu|mirror.kakao|g' /etc/apt/sources.list
-$SUDO sed -i 's|/security.ubuntu|mirror.kakao|g' /etc/apt/sources.list
+$SUDO sed -i 's|/archive.ubuntu|/mirror.kakao|g' /etc/apt/sources.list
+$SUDO sed -i 's|/security.ubuntu|/mirror.kakao|g' /etc/apt/sources.list
 
 # default
 $SUDO apt update
