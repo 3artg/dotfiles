@@ -90,8 +90,7 @@ alias ls='ls --color=auto'
 alias c='clear'
 alias e="$EDITOR"
 alias E="nvim -u NONE"
-alias g="git --no-pager"
-alias git="git --no-pager"
+alias g='git'
 alias gs="git status"
 alias ls='lsd'
 alias l='lsd -l'
