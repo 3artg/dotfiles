@@ -169,7 +169,12 @@ else
 fi
 alias fd='fdfind'
 
-export DISPLAY=0:0
+# WSL X Server
+if grep -qi microsoft /proc/version; then
+  export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+else
+  export DISPLAY=0:0
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
