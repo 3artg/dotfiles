@@ -38,7 +38,7 @@ $SUDO apt install -y neovim
 # nodejs
 curl -fsSL https://deb.nodesource.com/setup_19.x | $SUDO -E bash - &&\
 $SUDO apt-get install -y nodejs
-$SUDO npm i -g serve
+$SUDO npm i -g serve diff-so-fancy
 
 # lsd
 curl -LJo lsd.deb https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb
