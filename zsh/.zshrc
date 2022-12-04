@@ -97,6 +97,7 @@ alias e="$EDITOR"
 alias E="nvim -u NONE"
 alias g="git --no-pager"
 alias git="git --no-pager"
+alias gs="git status"
 alias ls='lsd'
 alias l='lsd -l'
 alias ll='lsd -Al'
