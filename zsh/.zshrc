@@ -130,6 +130,6 @@ fi
 
 zvm_after_init_commands+=(
   '[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh'
-  "bindkey '^[[A' up-line-or-search"
-  "bindkey '^[[B' down-line-or-search"
+  "bindkey -v '^[[A' up-line-or-search"
+  "bindkey -v '^[[B' down-line-or-search"
 )
