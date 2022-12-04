@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+#
+# Caution
+# This code is not tested.
+#
+
 if [[ ! $(lsb_release -d) =~ '.*Ubuntu 18.04.05 LTS' ]]; then
   echo 'This script is for Ubuntu 18.04.05 LTS. (aistages)'
   echo 'Current OS:' $(lsb_release -d | cut -f2)
@@ -7,7 +12,7 @@ if [[ ! $(lsb_release -d) =~ '.*Ubuntu 18.04.05 LTS' ]]; then
 fi
 
 if [[ $(pwd) != *dotfiles ]]; then
-  echo 'SHOULD BE AT DOTFILES'
+  echo 'YOU MUST BE AT DOTFILES TO EXECUTE THIS'
   exit
 fi
 
@@ -55,8 +60,12 @@ git clone https://github.com/jeffreytse/zsh-vi-mode ~/.oh-my-zsh/custom/plugins/
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
+# tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# symlink
 mv ~/.bashrc ~/.bashrc.bak
 mv ~/.zshrc ~/.zshrc.bak
 stow bash bin git ssh vim zsh
 
-source ~/.zshrc
+exec zsh
