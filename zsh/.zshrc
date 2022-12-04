@@ -87,11 +87,6 @@ export FZF_ALT_C_COMMAND='fdfind --type directory --hidden | sed -En "s/\.\///; 
 alias ls='ls --color=auto'
 # PS1='\[\e[m\][\u@\h \W]\[\e[93m\]\$\[\e[m\] '
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
 alias c='clear'
 alias e="$EDITOR"
 alias E="nvim -u NONE"
