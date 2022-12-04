@@ -1,23 +1,64 @@
 [user]
-    email = ganghe74@gmail.com
-    name = KH
-    signingkey = 804158AF35BE6B54
+	email = ganghe74@gmail.com
+	name = KH
+
 [push]
-    default = simple
+	default = simple
+
 [color]
-    ui = auto
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	ui = auto
+
 [core]
-    quotepath = off
-    editor = nvim
+	quotepath = off
+	editor = nvim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
 [commit]
-    gpgsign = false
+	gpgsign = false
+
 [gpg]
-    program = gpg
+	program = gpg
+
 [alias]
-    a = add
-    s = status
-    co = checkout
-    ci = commit
-    b = branch
-    br = branch
-    l = !git --no-pager log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit -10
+	a = add
+	s = status
+	co = checkout
+	ci = commit
+	b = branch
+	br = branch
+	l = !git --no-pager log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit -10
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
+
+[color "decorate"]
+	# With git 1.8+, %C(auto)%d will assign different color to each refspec.
+	HEAD = cyan
+	branch = yellow
+	tag = magenta
+
+[color "status"]
+	branch = cyan
+	added = green
+	changed = red
+	nobranch = red bold
+	untracked = yellow
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
