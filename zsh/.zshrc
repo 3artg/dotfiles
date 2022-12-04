@@ -118,9 +118,11 @@ else
 fi
 alias fd='fdfind'
 
-# WSL X Server
+# X11
 if grep -qi microsoft /proc/version; then
   export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+elif [[ ! -z $SSH_TTY ]]; then
+  export DISPLAY=localhost:10.0
 else
   export DISPLAY=0:0
 fi
