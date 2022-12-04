@@ -127,4 +127,8 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
+zvm_after_init_commands+=(
+  '[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh'
+  "bindkey '^[[A' up-line-or-search"
+  "bindkey '^[[B' down-line-or-search"
+)
