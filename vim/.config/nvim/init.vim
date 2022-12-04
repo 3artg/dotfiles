@@ -102,10 +102,10 @@ Plug 'mhinz/vim-startify'
 let g:startify_bookmarks = [
     \ {'a': '~/workspace/algo'},
     \ {'b': '~/.bashrc'},
-    \ {'d': '~/dotfiles'},
+    \ {'d': '~/.dotfiles'},
     \ {'g': '~/.gitconfig'},
     \ {'i': '~/.config/nvim/init.vim'},
-    \ {'t': '~/TODO.md'},
+    \ {'t': '~/.tmux.conf'},
     \ {'z': '~/.zshrc'}
     \ ]
 let g:startify_custom_header ='startify#center(startify#fortune#cowsay())'
