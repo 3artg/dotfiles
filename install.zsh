@@ -40,15 +40,12 @@ curl -fsSL https://deb.nodesource.com/setup_19.x | $SUDO -E bash - &&\
 $SUDO apt-get install -y nodejs
 $SUDO npm i -g serve diff-so-fancy
 
-# lsd
-curl -LJo lsd.deb https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb
-$SUDO dpkg -i lsd.deb
-rm lsd.deb
-
-# fd
-curl -LJo fd.deb https://github.com/sharkdp/fd/releases/download/v8.5.3/fd_8.5.3_amd64.deb
-$SUDO dpkg -i fd.deb
-rm fd.deb
+# debs
+for url in `cat etc/debs.txt`; do
+  curl -LJO $url
+done
+$SUDO dpkg -i *.deb
+rm *.deb
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
