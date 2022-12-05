@@ -63,7 +63,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -80,9 +80,10 @@ export VISUAL=nvim
 export MANPAGER="nvim +Man!"
 export GPG_TTY=$(tty)
 
+FD='fd'
 export FZF_BASE=~/.fzf
-export FZF_DEFAULT_COMMAND='fd'
-export FZF_ALT_C_COMMAND='fdfind --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
+export FZF_DEFAULT_COMMAND=$FD
+export FZF_ALT_C_COMMAND=$FD' --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
 
 alias ls='ls --color=auto'
 # PS1='\[\e[m\][\u@\h \W]\[\e[93m\]\$\[\e[m\] '
@@ -110,7 +111,7 @@ else
   alias wa='solve diff -t "nvim -d"'
   alias tc='solve tc -t nvim'
 fi
-alias fd='fdfind'
+alias fd=$FD
 
 # X11
 if grep -qi microsoft /proc/version; then
