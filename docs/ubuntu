@@ -1,4 +1,4 @@
-htop git gcc make ssh curl stow neovim tmux xclip caffeine
+htop git gcc make ssh curl stow neovim tmux xclip caffeine locales
 rename zsh tree neofetch cloc figlet byobu tldr man software-properties-common
 
 20+
