@@ -54,6 +54,7 @@ plugins=(
   fzf
   git
   python
+  z
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-vi-mode
