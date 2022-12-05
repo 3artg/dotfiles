@@ -27,22 +27,22 @@ fi
 # $SUDO sed -i 's|/archive.ubuntu|/mirror.kakao|g' /etc/apt/sources.list
 # $SUDO sed -i 's|/security.ubuntu|/mirror.kakao|g' /etc/apt/sources.list
 
-# locale
-$SUDO locale-gen en_US.UTF-8
-
 # default
 $SUDO apt update
 cat docs/ubuntu | awk -v 'RS=\n\n' '1;{exit}' | xargs $SUDO apt install -y
 
 # neovim
-$SUDO add-apt-repository ppa:neovim-ppa/stable
+$SUDO add-apt-repository -y ppa:neovim-ppa/stable
 $SUDO apt update
 $SUDO apt install -y neovim
 
 # nodejs
-curl -fsSL https://deb.nodesource.com/setup_16.x | $SUDE bash - &&\
+curl -fsSL https://deb.nodesource.com/setup_16.x | $SUDOE bash -
 $SUDO apt install -y nodejs
 $SUDO npm i -g serve diff-so-fancy
+
+# locale
+$SUDO locale-gen en_US.UTF-8
 
 # debs
 for url in `cat etc/debs.txt`; do
