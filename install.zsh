@@ -36,7 +36,7 @@ $SUDO apt update
 $SUDO apt install -y neovim
 
 # nodejs
-curl -fsSL https://deb.nodesource.com/setup_19.x | $SUDO -E bash - &&\
+curl -fsSL https://deb.nodesource.com/setup_16.x | $SUDO -E bash - &&\
 $SUDO apt-get install -y nodejs
 $SUDO npm i -g serve diff-so-fancy
 
