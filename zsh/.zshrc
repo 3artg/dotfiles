@@ -54,7 +54,7 @@ plugins=(
   fzf
   git
   python
-  z
+  zoxide
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-vi-mode
