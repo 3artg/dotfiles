@@ -5,8 +5,8 @@
 # This code is not tested.
 #
 
-if [[ ! $(lsb_release -d) =~ '.*Ubuntu 18.04.05 LTS' ]]; then
-  echo 'This script is for Ubuntu 18.04.05 LTS. (aistages)'
+if ! grep -q 'Ubuntu 18.04' /etc/lsb-release; then
+  echo 'This script is for Ubuntu 18.04. (aistages)'
   echo 'Current OS:' $(lsb_release -d | cut -f2)
   exit
 fi
