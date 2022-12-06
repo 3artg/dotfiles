@@ -238,6 +238,9 @@ nnoremap <silent> <expr> <leader><leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\
 nmap <leader>c<space> <Plug>NERDCommenterToggle
 vmap <leader>c<space> <Plug>NERDCommenterToggle
 
+nnoremap <leader>sn :set nu!<CR>
+nnoremap <leader>srn :set rnu!<CR>
+
 " <C-_> is <C-/>
 nmap <C-_> <Plug>NERDCommenterToggle
 imap <C-_> <Plug>NERDCommenterToggle
