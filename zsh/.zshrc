@@ -77,6 +77,7 @@ export HISTSIZE=1000000
 export HISTFILESIZE=1000000000
 
 export EDITOR=nvim
+export ZVM_VI_EDITOR=nvim
 export VISUAL=nvim
 export MANPAGER="nvim +Man!"
 export GPG_TTY=$(tty)
