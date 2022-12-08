@@ -89,6 +89,8 @@ alias ls='ls --color=auto'
 # PS1='\[\e[m\][\u@\h \W]\[\e[93m\]\$\[\e[m\] '
 
 alias c='clear'
+alias du1='du -hd1 | sort -h'
+alias df='df -h'
 alias e="$EDITOR"
 alias E="nvim -u NONE"
 alias g='git'
@@ -96,8 +98,9 @@ alias gs="git status"
 alias ls='lsd'
 alias l='lsd -l'
 alias ll='lsd -Al'
-alias mv='mv -i'
-alias cp='cp -i'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias rm='rm -v'
 alias vi='nvim'
 alias grep='grep --color=auto'
 alias t='tmux'
