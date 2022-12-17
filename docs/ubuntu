@@ -1,11 +1,12 @@
-htop git gcc make ssh curl wget stow neovim tmux xclip caffeine locales musl
+htop git gcc make ssh curl wget stow neovim tmux xclip locales musl zip cmake
 rename zsh tree neofetch cloc figlet tldr man software-properties-common
+cifs-utils tzdata
 
 20+
 ripgrep 
 
 for desktop
-ibus-hangul fonts-noto-cjk fonts-nanum\* grub-customizer 
+ibus-hangul fonts-noto-cjk fonts-nanum\* grub-customizer caffeine 
 
 etc
 lsd kime fzf the_silver_searcher fd
