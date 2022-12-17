@@ -94,6 +94,8 @@ alias e="$EDITOR"
 alias E="nvim -u NONE"
 alias g='git'
 alias gh='ghn'
+alias ghA='gh --all'
+alias gha='gh --exclude=refs/stash --all'
 alias github='\gh'
 alias gs="git status"
 alias ls='lsd'
