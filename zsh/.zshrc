@@ -90,6 +90,7 @@ alias ls='ls --color=auto'
 # PS1='\[\e[m\][\u@\h \W]\[\e[93m\]\$\[\e[m\] '
 
 alias c='clear'
+alias ca='conda activate'
 alias du1='du -hd1 | sort -h'
 alias df='df -h'
 alias e="$EDITOR"
@@ -133,3 +134,25 @@ zvm_after_init_commands+=(
   "bindkey '^[[A' up-line-or-search"
   "bindkey '^[[B' down-line-or-search"
 )
+
+# Anaconda3
+# see ~/.zshenv for $CONDA_EXE detection
+function _conda_initialize() {
+# >>> conda initialize >>>
+if [ -n "${CONDA_EXE}" ]; then
+  ${CONDA_EXE} config --set auto_activate_base false
+  __conda_setup="$(${CONDA_EXE} 'shell.zsh' 'hook' 2> /dev/null)"
+  if [ $? -eq 0 ]; then
+      eval "$__conda_setup"
+  fi
+  unset __conda_setup
+fi
+# <<< conda initialize <<<
+}
+
+# Note: conda initialize is slow (0.3 sec), so execute lazily
+conda() {
+  unfunction conda
+  _conda_initialize
+  conda "$@"
+}
