@@ -96,3 +96,7 @@
 
 [init]
 	defaultBranch = main
+[pull]
+	ff = only
+[rebase]
+	autosquash = true
