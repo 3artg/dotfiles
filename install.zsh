@@ -45,13 +45,12 @@ $SUDO npm i -g serve diff-so-fancy
 $SUDO locale-gen en_US.UTF-8
 
 # debs
-for url in `cat etc/debs.txt`; do
-  curl -LJO $url
-done
-$SUDO dpkg -i *.deb
-rm *.deb
+wget --directory-prefix=tmp --input-file=etc/debs.txt --quiet --show-progress
+$SUDO dpkg -i tmp/*.deb
+rm -rf tmp
 
 # oh-my-zsh
+RUNZSH=no
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
