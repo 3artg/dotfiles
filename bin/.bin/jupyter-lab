@@ -1,3 +1,0 @@
-#!/bin/bash
-PORT="${1:-8888}"
-jupyter lab --no-browser --ip "*" --notebook-dir . --port $PORT
