@@ -30,7 +30,12 @@
 	ci = commit
 	b = branch
 	br = branch
-	l = !git --no-pager log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit -10
+	l = log --graph --decorate \
+		--pretty=format:'%C(yellow)%h%Creset  %C(auto)%d%Creset %s  %Cgreen(%ar) %C(bold blue)<%an>%Creset' \
+		--abbrev-commit --date=short --date-order -10
+	history = log --graph --decorate \
+		--pretty=format:'%C(yellow)%h%Creset  %C(auto)%d%Creset %s  %Cgreen(%ar) %C(bold blue)<%an>%Creset' \
+		--abbrev-commit --date=short --date-order
 
 [interactive]
 	diffFilter = delta --color-only --features=interactive

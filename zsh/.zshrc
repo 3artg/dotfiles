@@ -93,6 +93,8 @@ alias df='df -h'
 alias e="$EDITOR"
 alias E="nvim -u NONE"
 alias g='git'
+alias gh='ghn'
+alias github='\gh'
 alias gs="git status"
 alias ls='lsd'
 alias l='lsd -l --date="+%y-%m-%d %H:%M"'
@@ -152,4 +154,12 @@ conda() {
   unfunction conda
   _conda_initialize
   conda "$@"
+}
+
+function ghn() {
+    # git history, but truncate w.r.t the terminal size. Assumes not headless.
+    # A few lines to subtract from the height: previous prompt (2) + blank (1) + current prompt (2)
+    local num_lines=$(($(stty size | cut -d" " -f1) - 5))
+    if [[ $num_lines -gt 25 ]]; then num_lines=$((num_lines - 5)); fi  # more margin
+    git history --color=always -n$num_lines "$@" | head -n$num_lines | less --QUIT-AT-EOF -F
 }
