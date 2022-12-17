@@ -84,7 +84,7 @@ export GPG_TTY=$(tty)
 
 export FZF_BASE=~/.fzf
 export FZF_DEFAULT_COMMAND='fd'
-export FZF_ALT_C_COMMAND='fd --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
+export FZF_ALT_C_COMMAND='fd -L --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
 
 alias c='clear'
 alias ca='conda activate'
@@ -99,8 +99,8 @@ alias gha='gh --exclude=refs/stash --all'
 alias github='\gh'
 alias gs="git status"
 alias ls='lsd'
-alias l='lsd -l --date="+%y-%m-%d %H:%M"'
-alias ll='lsd -Al --date="+%y-%m-%d %H:%M"'
+alias l='lsd -l --date="+%y-%m-%d %H:%M" --group-directories-first'
+alias ll='lsd -Al --date="+%y-%m-%d %H:%M" --group-directories-first'
 alias mv='mv -iv'
 alias cp='cp -iv'
 alias rm='rm -v'
