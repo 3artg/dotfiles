@@ -86,9 +86,6 @@ export FZF_BASE=~/.fzf
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_ALT_C_COMMAND='fd --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
 
-alias ls='ls --color=auto'
-# PS1='\[\e[m\][\u@\h \W]\[\e[93m\]\$\[\e[m\] '
-
 alias c='clear'
 alias ca='conda activate'
 alias du1='du -hd1 | sort -h'
@@ -98,8 +95,8 @@ alias E="nvim -u NONE"
 alias g='git'
 alias gs="git status"
 alias ls='lsd'
-alias l='lsd -l'
-alias ll='lsd -Al'
+alias l='lsd -l --date="+%y-%m-%d %H:%M"'
+alias ll='lsd -Al --date="+%y-%m-%d %H:%M"'
 alias mv='mv -iv'
 alias cp='cp -iv'
 alias rm='rm -v'
