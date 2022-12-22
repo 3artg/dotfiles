@@ -165,3 +165,28 @@ function ghn() {
     if [[ $num_lines -gt 25 ]]; then num_lines=$((num_lines - 5)); fi  # more margin
     git history --color=always -n$num_lines "$@" | head -n$num_lines | less --QUIT-AT-EOF -F
 }
+
+# pip
+function pip-search() {
+  (( $+commands[pip_search] )) || python -m pip install pip_search
+  pip_search "$@"
+}
+# some useful fzf-grepping functions for python
+function pip-list-fzf() {
+  pip list "$@" | fzf --header-lines 2 --reverse --nth 1 --multi | awk '{print $1}'
+}
+function pip-search-fzf() {
+  # 'pip search' is gone; try: pip install pip_search
+  if ! (( $+commands[pip_search] )); then echo "pip_search not found (Try: pip install pip_search)."; return 1; fi
+  if [[ -z "$1" ]]; then echo "argument required"; return 1; fi
+  pip-search "$@" | fzf --reverse --multi --no-sort --header-lines=4 | awk '{print $3}'
+}
+function conda-list-fzf() {
+  conda list "$@" | fzf --header-lines 3 --reverse --nth 1 --multi | awk '{print $1}'
+}
+function pipdeptree-fzf() {
+  python -m pipdeptree "$@" | fzf --reverse
+}
+function pipdeptree-vim() {   # e.g. pipdeptree -p <package>
+  python -m pipdeptree "$@" | vim - +"set ft=config foldmethod=indent" +"norm zR"
+}
