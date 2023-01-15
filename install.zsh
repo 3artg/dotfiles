@@ -1,12 +1,7 @@
 #!/bin/zsh
 
-#
-# Caution
-# This code is not tested.
-#
-
-if ! grep -q 'Ubuntu 18.04' /etc/lsb-release; then
-  echo 'This script is for Ubuntu 18.04. (aistages)'
+if ! grep -q 'Ubuntu' /etc/lsb-release; then
+  echo 'This script is for Ubuntu.'
   echo 'Current OS:' $(lsb_release -d | cut -f2)
   exit
 fi
@@ -28,6 +23,7 @@ fi
 # $SUDO sed -i 's|/security.ubuntu|/mirror.kakao|g' /etc/apt/sources.list
 
 # default
+DEBIAN_FRONTEND=noninteractive
 $SUDO apt update
 cat docs/ubuntu | awk -v 'RS=\n\n' '1;{exit}' | xargs $SUDO apt install -y
 
@@ -41,6 +37,10 @@ curl -fsSL https://deb.nodesource.com/setup_16.x | $SUDOE bash -
 $SUDO apt install -y nodejs
 $SUDO npm i -g serve diff-so-fancy
 
+# timezone
+$SUDO ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+$SUDO dpkg-reconfigure --frontend noninteractive tzdata
+
 # locale
 $SUDO locale-gen en_US.UTF-8
 
@@ -50,6 +50,7 @@ $SUDO dpkg -i tmp/*.deb
 rm -rf tmp
 
 # oh-my-zsh
+$SUDO chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
