@@ -6,6 +6,16 @@ if ! grep -q 'Ubuntu' /etc/lsb-release; then
   exit
 fi
 
+VER=`lsb_release -r | cut -f2 | cut -d. -f1`
+if [[ $VER -eq 18 ]]; then
+  NODE_VER=16
+elif [[ $VER -eq 22 ]]; then
+  NODE_VER=19
+else
+  echo Cannot specify node version for this Ubuntu version. $VER
+  exit
+fi
+
 if [[ $(pwd) != *dotfiles ]]; then
   echo 'YOU MUST BE AT DOTFILES TO EXECUTE THIS'
   exit
@@ -33,9 +43,9 @@ $SUDO apt update
 $SUDO apt install -y neovim
 
 # nodejs
-curl -fsSL https://deb.nodesource.com/setup_16.x | $SUDOE bash -
+curl -fsSL https://deb.nodesource.com/setup_$NODE_VER.x | $SUDOE bash -
 $SUDO apt install -y nodejs
-$SUDO npm i -g serve diff-so-fancy
+$SUDO npm i -g serve
 
 # timezone
 $SUDO ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
