@@ -2,20 +2,16 @@
 	email = ganghe74@gmail.com
 	name = KH
 
-[push]
-	default = simple
-
-[color]
-	status = auto
-	diff = auto
-	branch = auto
-	interactive = auto
-	ui = auto
-
 [core]
 	quotepath = off
 	editor = nvim
 	pager = delta
+
+[init]
+	defaultBranch = main
+
+[push]
+	default = simple
 
 [commit]
 	gpgsign = false
@@ -39,6 +35,25 @@
 
 [interactive]
 	diffFilter = delta --color-only --features=interactive
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[pull]
+	ff = only
+
+[rebase]
+	autosquash = true
+
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	ui = auto
 
 [color "decorate"]
 	# With git 1.8+, %C(auto)%d will assign different color to each refspec.
@@ -87,16 +102,3 @@
     line-numbers-right-style = cyan
     line-numbers-minus-style = 124
     line-numbers-plus-style = 28
-
-[merge]
-	conflictstyle = diff3
-
-[diff]
-	colorMoved = default
-
-[init]
-	defaultBranch = main
-[pull]
-	ff = only
-[rebase]
-	autosquash = true
