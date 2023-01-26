@@ -105,6 +105,7 @@ let g:startify_bookmarks = [
     \ {'d': '~/.dotfiles'},
     \ {'g': '~/.gitconfig'},
     \ {'i': '~/.config/nvim/init.vim'},
+    \ {'p': '~/.p10k.zsh'},
     \ {'s': '~/.ssh/config'},
     \ {'t': '~/.tmux.conf'},
     \ {'z': '~/.zshrc'}
