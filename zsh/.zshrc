@@ -86,6 +86,10 @@ export FZF_BASE=~/.fzf
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_ALT_C_COMMAND='fd -L --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
 
+if [[ $TERM_PROGRAM == 'vscode' ]]; then
+  export GIT_EDITOR='code --wait'
+fi
+
 alias c='clear'
 alias ca='conda activate'
 alias du1='du -hd1 | sort -h'
