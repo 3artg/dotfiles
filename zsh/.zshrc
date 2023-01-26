@@ -53,6 +53,7 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
   fzf
   git
+  gitfast
   python
   zoxide
   zsh-autosuggestions
