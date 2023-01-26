@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -n `git symbolic-ref HEAD | grep -E -q "p(rivate)?/" `]; then
+if git symbolic-ref HEAD | grep -E -q "/p(rivate)?/.*$"; then
     echo "Error: you are trying to push a private branch: $(git symbolic-ref HEAD)"
     echo "NOT pushing!"
     exit 1
