@@ -9,6 +9,7 @@
 
 [init]
 	defaultBranch = main
+	templatedir = ~/.gittemplates
 
 [push]
 	default = simple
