@@ -1,0 +1,46 @@
+#!/bin/sh
+
+if [ -n `git symbolic-ref HEAD | grep -E -q "p(rivate)?/" `]; then
+    echo "Error: you are trying to push a private branch: $(git symbolic-ref HEAD)"
+    echo "NOT pushing!"
+    exit 1
+fi
+
+remote="$1"
+url="$2"
+
+z40=0000000000000000000000000000000000000000
+
+IFS=' '
+while read local_ref local_sha remote_ref remote_sha
+do
+    if [ "$local_sha" = $z40 ]
+    then
+        # Handle delete
+        :
+    else
+        if [ "$remote_sha" = $z40 ]
+        then
+            # New branch, examine all commits
+            range="$local_sha"
+        else
+            # Update to existing branch, examine new commits
+            range="$remote_sha..$local_sha"
+        fi
+
+        # Check for WIP commit
+        commit=`git rev-list -n 1 --grep '^PRIVATE:' "$range"`
+        if [ -n "$commit" ]
+        then
+            echo "Error: Found PRIVATE commit in $local_ref."
+            echo "The commit is in the range $range."
+            echo "NOT pushing!"
+            exit 1
+        fi
+    fi
+done
+
+exit 0
+
+remote="$1"
+url="$2"
