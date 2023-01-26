@@ -6,6 +6,7 @@
 	quotepath = off
 	editor = nvim
 	pager = delta
+	excludesfile = ~/.gitignore
 
 [init]
 	defaultBranch = main
