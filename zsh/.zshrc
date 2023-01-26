@@ -85,7 +85,12 @@ export GPG_TTY=$(tty)
 export FZF_BASE=~/.fzf
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_ALT_C_COMMAND='fd -L --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --preview-window=right:wrap --preview "bat --color=always --style=numbers --line-range :500 {}"'
+# Preview file content using bat (https://github.com/sharkdp/bat)
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+# Print tree structure in the preview window
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
 if [[ $TERM_PROGRAM == 'vscode' ]]; then
   export GIT_EDITOR='code --wait'
