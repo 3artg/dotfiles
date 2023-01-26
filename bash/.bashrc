@@ -52,3 +52,5 @@ source /usr/share/fzf/completion.bash
 
 export DISPLAY=0:0
 export FZF_ALT_C_COMMAND='fd --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
