@@ -85,6 +85,7 @@ export GPG_TTY=$(tty)
 export FZF_BASE=~/.fzf
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_ALT_C_COMMAND='fd -L --type directory --hidden | sed -En "s/\.\///; /^\\./{H;bL}; p; :L \${g;s/^\\n//;T;p}"'
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --preview-window=right:wrap --preview "bat --color=always --style=numbers --line-range :500 {}"'
 
 if [[ $TERM_PROGRAM == 'vscode' ]]; then
   export GIT_EDITOR='code --wait'
