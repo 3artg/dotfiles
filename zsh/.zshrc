@@ -211,3 +211,5 @@ function pipdeptree-fzf() {
 function pipdeptree-vim() {   # e.g. pipdeptree -p <package>
   python -m pipdeptree "$@" | vim - +"set ft=config foldmethod=indent" +"norm zR"
 }
+
+[[ -d /usr/lib/wsl/lib ]] && export LD_LIBRARY_PATH=/usr/lib/wsl/lib:$LD_LIBRARY_PATH
