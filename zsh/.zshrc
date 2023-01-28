@@ -129,6 +129,7 @@ alias top='htop'
 alias topc='htop -s PERCENT_CPU'
 alias topm='htop -s PERCENT_MEM'
 alias s='solve'
+alias reload='exec zsh'
 alias run='solve run --copytool copy'
 alias get='solve get'
 if [[ $TERM_PROGRAM == 'vscode' ]]; then
