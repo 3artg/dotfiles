@@ -1,1 +1,4 @@
+# Global gitignore
+
+# vim
 *.swp
