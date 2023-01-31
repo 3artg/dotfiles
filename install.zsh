@@ -27,10 +27,10 @@ if (( $EUID != 0 )); then
   SUDOE='sudo -E'
 fi
 
-# fast repo server
-# $SUDO cp /etc/apt/sources.list /etc/apt/sources.list.bak
-# $SUDO sed -i 's|/archive.ubuntu|/mirror.kakao|g' /etc/apt/sources.list
-# $SUDO sed -i 's|/security.ubuntu|/mirror.kakao|g' /etc/apt/sources.list
+# fast apt server
+$SUDO cp /etc/apt/sources.list /etc/apt/sources.list.bak
+$SUDO sed -i 's|/archive.ubuntu|/mirror.kakao|g' /etc/apt/sources.list
+$SUDO sed -i 's|/security.ubuntu|/mirror.kakao|g' /etc/apt/sources.list
 
 # default
 DEBIAN_FRONTEND=noninteractive
@@ -53,6 +53,7 @@ $SUDO dpkg-reconfigure --frontend noninteractive tzdata
 
 # locale
 $SUDO locale-gen en_US.UTF-8
+$SUDO update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 
 # debs
 wget --directory-prefix=tmp --input-file=etc/debs.txt --quiet --show-progress
