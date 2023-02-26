@@ -139,6 +139,8 @@ else
   alias wa='solve diff -t "nvim -d"'
   alias tc='solve tc -t nvim'
 fi
+alias ipython='python -m IPython --no-confirm-exit'
+alias ipy='ipython'
 
 # X11
 if grep -qi microsoft /proc/version; then
