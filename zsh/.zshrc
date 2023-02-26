@@ -139,6 +139,10 @@ else
   alias wa='solve diff -t "nvim -d"'
   alias tc='solve tc -t nvim'
 fi
+alias pip='python -m pip'
+alias pip3='python3 -m pip'
+alias py='python'
+alias py3='python3'
 alias ipython='python -m IPython --no-confirm-exit'
 alias ipy='ipython'
 
@@ -213,6 +217,18 @@ function pipdeptree-fzf() {
 }
 function pipdeptree-vim() {   # e.g. pipdeptree -p <package>
   python -m pipdeptree "$@" | vim - +"set ft=config foldmethod=indent" +"norm zR"
+}
+function site-packages() {
+    # print the path to the site packages from current python environment,
+    # e.g. ~/.anaconda3/envs/XXX/lib/python3.6/site-packages/
+
+    local base=$(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
+    if [[ -n "$1" ]] && [[ ! -d "$base/$1" ]]; then
+        echo "Does not exist: $base/$1" >&2;
+        return 1
+    else
+        echo "$base/$1"
+    fi;
 }
 
 [[ -d /usr/lib/wsl/lib ]] && export LD_LIBRARY_PATH=/usr/lib/wsl/lib:$LD_LIBRARY_PATH
