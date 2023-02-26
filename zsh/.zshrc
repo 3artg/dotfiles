@@ -97,6 +97,8 @@ if [[ $TERM_PROGRAM == 'vscode' ]]; then
   export GIT_EDITOR='code --wait'
 fi
 
+export PYTHONSTARTUP=$HOME/.pythonrc.py
+
 alias c='clear'
 alias ca='conda activate'
 alias du1='du -hd1 | sort -h'
