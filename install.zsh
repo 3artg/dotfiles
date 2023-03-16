@@ -9,7 +9,7 @@ fi
 VER=`lsb_release -r | cut -f2 | cut -d. -f1`
 if [[ $VER -eq 18 ]]; then
   NODE_VER=16
-elif [[ $VER -eq 22 ]]; then
+elif [[ $VER -eq 20 || $VER -eq 22 ]]; then
   NODE_VER=19
 else
   echo Cannot specify node version for this Ubuntu version. $VER
