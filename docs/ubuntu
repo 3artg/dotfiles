@@ -1,6 +1,6 @@
 htop git gcc make ssh curl wget stow neovim tmux xclip locales musl zip cmake
 rename zsh tree neofetch cloc figlet tldr man software-properties-common
-cifs-utils tzdata progress sudo
+cifs-utils tzdata progress sudo git-extras
 
 20+
 ripgrep 

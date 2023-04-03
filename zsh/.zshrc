@@ -52,10 +52,20 @@ HIST_STAMPS="yyyy-mm-dd"
 # plugins
 plugins=(
   alias-tips
+  cp
+  extract
+  fd
   fzf
   git
+  git-extras
   gitfast
+  jump
+  node
+  npm
+  pip
   python
+  ubuntu
+  vscode
   zoxide
   zsh-autosuggestions
   zsh-syntax-highlighting
