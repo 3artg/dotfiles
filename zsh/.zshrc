@@ -51,6 +51,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # plugins
 plugins=(
+  alias-tips
   fzf
   git
   gitfast
