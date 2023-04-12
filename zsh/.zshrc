@@ -162,7 +162,7 @@ alias ipy='ipython'
 # X11
 if grep -qi microsoft /proc/version; then
   export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-elif [[ $SSH_TTY ]]; then
+elif [[ $SSH_CLIENT ]]; then
   export DISPLAY=localhost:10.0
 else
   export DISPLAY=0:0
