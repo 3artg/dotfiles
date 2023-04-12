@@ -30,3 +30,5 @@ _try_conda_base "$HOME/miniconda3";
 _try_conda_base "/usr/local/miniconda3";
 _try_conda_base "/opt/conda";
 unfunction _try_conda_base
+
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
