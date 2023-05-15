@@ -158,6 +158,7 @@ alias py='python'
 alias py3='python3'
 alias ipython='python -m IPython --no-confirm-exit'
 alias ipy='ipython'
+alias ptpy='ptpython'
 
 # X11
 if grep -qi microsoft /proc/version; then
