@@ -60,6 +60,9 @@ wget --directory-prefix=tmp --input-file=etc/debs.txt --quiet --show-progress
 $SUDO dpkg -i tmp/*.deb
 rm -rf tmp
 
+# ssh public keys
+curl https://github.com/ganghe74.keys >> ~/.ssh/authorized_keys
+
 # oh-my-zsh
 $SUDO chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
