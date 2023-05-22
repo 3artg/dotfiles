@@ -245,4 +245,8 @@ function site-packages() {
     fi;
 }
 
-[[ -d /usr/lib/wsl/lib ]] && export LD_LIBRARY_PATH=/usr/lib/wsl/lib:$LD_LIBRARY_PATH
+# WSL
+if [[ -d /usr/lib/wsl/lib ]] then
+  export LD_LIBRARY_PATH=/usr/lib/wsl/lib:$LD_LIBRARY_PATH
+  alias open=explorer.exe
+fi
