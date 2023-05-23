@@ -64,6 +64,7 @@ plugins=(
   npm
   pip
   python
+  sudo
   ubuntu
   vscode
   zoxide
