@@ -82,6 +82,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # symlink
 mv ~/.bashrc ~/.bashrc.bak
 mv ~/.zshrc ~/.zshrc.bak
-stow bash bin git ssh vim zsh tmux
+stow bash bin git ssh vim zsh tmux python
 
 exec zsh
