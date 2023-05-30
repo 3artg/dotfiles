@@ -52,6 +52,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # plugins
 plugins=(
   alias-tips
+  copybuffer
+  copypath
   cp
   extract
   fd
@@ -67,6 +69,7 @@ plugins=(
   sudo
   ubuntu
   vscode
+  web-search
   zoxide
   zsh-autosuggestions
   zsh-completions
