@@ -69,6 +69,7 @@ plugins=(
   vscode
   zoxide
   zsh-autosuggestions
+  zsh-completions
   zsh-syntax-highlighting
   zsh-vi-mode
 )
