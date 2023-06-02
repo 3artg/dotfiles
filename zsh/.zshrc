@@ -115,6 +115,11 @@ fi
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
+# .zshrc.local
+if [[ -s ~/.zshrc.local ]]; then
+  source ~/.zshrc.local
+fi
+
 alias c='clear'
 alias ca='conda activate'
 alias du1='du -hd1 | sort -h'
