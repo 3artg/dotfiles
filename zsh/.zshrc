@@ -120,6 +120,11 @@ if [[ -s ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
 
+# PROMPT_HOST_COLOR
+if [[ -z "$PROMPT_HOST_COLOR" ]]; then
+  export PROMPT_HOST_COLOR="6" # cyan
+fi
+
 alias c='clear'
 alias ca='conda activate'
 alias du1='du -hd1 | sort -h'
