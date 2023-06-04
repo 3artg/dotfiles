@@ -145,6 +145,7 @@ alias ll='lsd -Al --date="+%y-%m-%d %H:%M" --group-directories-first'
 alias llt='ll -t'
 alias mv='mv -iv'
 alias cp='cp -iv'
+alias cpr='rsync -aAX --info=progress2'
 alias rm='rm -v'
 if command -v nvim 2>&1 >/dev/null; then
   alias vi='nvim'
