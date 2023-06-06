@@ -140,6 +140,7 @@ alias gs="git status"
 alias help='run-help'
 alias ls='lsd'
 alias l='lsd -l --date="+%y-%m-%d %H:%M" --group-directories-first'
+alias la='lsd -al --date="+%y-%m-%d %H:%M" --group-directories-first'
 alias lt='l -t'
 alias ll='lsd -Al --date="+%y-%m-%d %H:%M" --group-directories-first'
 alias llt='ll -t'
