@@ -1,6 +1,5 @@
-[user]
-	email = ganghe74@gmail.com
-	name = KH
+[include]
+	path = ~/.gitconfig.secret
 
 [core]
 	quotepath = off
