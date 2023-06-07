@@ -1,3 +1,5 @@
+sorin-ionescu/prezto
+
 ohmyzsh/ohmyzsh path:lib
 ohmyzsh/ohmyzsh path:plugins/copybuffer
 ohmyzsh/ohmyzsh path:plugins/copypath
@@ -18,13 +20,7 @@ ohmyzsh/ohmyzsh path:plugins/ubuntu
 ohmyzsh/ohmyzsh path:plugins/vscode
 ohmyzsh/ohmyzsh path:plugins/web-search
 
-belak/zsh-utils path:editor
-belak/zsh-utils path:history
-belak/zsh-utils path:prompt
-belak/zsh-utils path:utility
-belak/zsh-utils path:completion
-
-jeffreytse/zsh-vi-mode
+# jeffreytse/zsh-vi-mode
 djui/alias-tips
 wookayin/fzf-fasd
 

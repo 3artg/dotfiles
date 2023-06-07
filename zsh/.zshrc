@@ -18,6 +18,22 @@ fi
 # see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
 
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'archive' \
+  'rsync' \
+  'completion' \
+  'prompt' \
+  'fasd' \
+  'ruby' \
+  'git'
+
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 antidote load
 autoload -Uz promptinit && promptinit && prompt powerlevel10k
@@ -31,8 +47,7 @@ autoload -Uz promptinit && promptinit && prompt powerlevel10k
 
 export PATH=$PATH:~/.local/bin:~/.bin
 
-# shopt -s histappend
-export HISTCONTROL=ignoreboth
+export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000
 export HISTFILESIZE=1000000000
 
@@ -218,6 +233,7 @@ function site-packages() {
 
 # WSL
 if [[ -d /usr/lib/wsl/lib ]] then
+  export PATH=$(echo $PATH | tr ':' '\n' | grep -v '^/mnt/c' | tr '\n' ':' | sed 's/:$//'):/mnt/c/Windows
   export LD_LIBRARY_PATH=/usr/lib/wsl/lib:$LD_LIBRARY_PATH
   alias open=explorer.exe
 fi
