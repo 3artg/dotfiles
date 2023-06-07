@@ -72,6 +72,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/cu
 git clone https://github.com/jeffreytse/zsh-vi-mode ~/.oh-my-zsh/custom/plugins/zsh-vi-mode
 git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+git clone https://github.com/wookayin/fzf-fasd ~/.oh-my-zsh/custom/plugins/fzf-fasd
 
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf

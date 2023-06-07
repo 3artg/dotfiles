@@ -58,6 +58,7 @@ plugins=(
   extract
   fd
   fzf
+  fzf-fasd
   git
   git-extras
   gitfast
@@ -70,7 +71,6 @@ plugins=(
   ubuntu
   vscode
   web-search
-  zoxide
   zsh-autosuggestions
   zsh-completions
   zsh-syntax-highlighting
@@ -179,6 +179,19 @@ alias ptpython='python -m ptpython'
 alias ptipython='python -m ptpython.entry_points.run_ptipython'
 alias ptpy='ptipython'
 alias pt='ptpy'
+
+# Aliases for FASD
+#
+# @see https://github.com/clvv/fasd
+eval "$(fasd --init auto)"
+alias a='fasd -a'
+alias s='fasd -si'
+alias d='fasd -d'
+alias f='fasd -f'
+alias sd='fasd -sid'
+alias sf='fasd -sif'
+alias z='fasd_cd -d'
+alias zz='fasd_cd -d -i'
 
 # X11
 if grep -qi microsoft /proc/version; then
