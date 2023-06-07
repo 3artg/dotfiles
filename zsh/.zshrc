@@ -1,42 +1,14 @@
+# PROMPT_HOST_COLOR
+if [[ -z "$PROMPT_HOST_COLOR" ]]; then
+  export PROMPT_HOST_COLOR="6" # cyan
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-#
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -46,38 +18,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # see 'man strftime' for details.
 HIST_STAMPS="yyyy-mm-dd"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# plugins
-plugins=(
-  alias-tips
-  copybuffer
-  copypath
-  cp
-  extract
-  fd
-  fzf
-  fzf-fasd
-  git
-  git-extras
-  gitfast
-  jump
-  node
-  npm
-  pip
-  python
-  sudo
-  ubuntu
-  vscode
-  web-search
-  zsh-autosuggestions
-  zsh-completions
-  zsh-syntax-highlighting
-  zsh-vi-mode
-)
-
-source $ZSH/oh-my-zsh.sh
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+antidote load
+autoload -Uz promptinit && promptinit && prompt powerlevel10k
 
 # User configuration
 
@@ -86,7 +29,7 @@ source $ZSH/oh-my-zsh.sh
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PATH=$PATH:~/.local/bin:~/.bin
+export PATH=$PATH:~/.local/bin:~/.bin
 
 # shopt -s histappend
 export HISTCONTROL=ignoreboth
@@ -118,11 +61,6 @@ export PYTHONSTARTUP=$HOME/.pythonrc.py
 # .zshrc.local
 if [[ -s ~/.zshrc.local ]]; then
   source ~/.zshrc.local
-fi
-
-# PROMPT_HOST_COLOR
-if [[ -z "$PROMPT_HOST_COLOR" ]]; then
-  export PROMPT_HOST_COLOR="6" # cyan
 fi
 
 alias c='clear'
