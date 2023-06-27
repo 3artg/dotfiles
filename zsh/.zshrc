@@ -1,4 +1,7 @@
-# PROMPT_HOST_COLOR
+# Default prompt host color for pure theme and tmux statusbar.
+# You may want to have different color per machine (use ANSI color name or xterm color codes [0-255]).
+#   - https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+# The PROMPT_HOST_COLOR variable can be inherited from a parent shell, tmux, or SSH session.
 if [[ -z "$PROMPT_HOST_COLOR" ]]; then
   export PROMPT_HOST_COLOR="6" # cyan
 fi
