@@ -60,9 +60,6 @@ wget --directory-prefix=tmp --input-file=etc/debs.txt --quiet --show-progress
 $SUDO dpkg -i tmp/*.deb
 rm -rf tmp
 
-# ssh public keys
-curl https://github.com/ganghe74.keys >> ~/.ssh/authorized_keys
-
 # antidote
 $SUDO chsh -s /bin/zsh
 git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
@@ -79,4 +76,8 @@ mv ~/.bashrc ~/.bashrc.bak
 mv ~/.zshrc ~/.zshrc.bak
 stow bash bin git ssh vim zsh tmux python
 
+# ssh public keys
+curl https://github.com/ganghe74.keys >> ~/.ssh/authorized_keys
+
+# execute zsh
 exec zsh
