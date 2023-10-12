@@ -193,7 +193,9 @@ function ghn() {
     # git history, but truncate w.r.t the terminal size. Assumes not headless.
     # A few lines to subtract from the height: previous prompt (2) + blank (1) + current prompt (2)
     local num_lines=$(($(stty size | cut -d" " -f1) - 5))
+    local num_cols=$(stty size | cut -d" " -f2)
     if [[ $num_lines -gt 25 ]]; then num_lines=$((num_lines - 5)); fi  # more margin
+    if [[ $num_cols -lt 100 ]]; then num_lines=10; fi
     git history --color=always -n$num_lines "$@" | head -n$num_lines | less --QUIT-AT-EOF -F
 }
 
